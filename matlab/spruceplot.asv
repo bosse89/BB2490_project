@@ -1,0 +1,30 @@
+close all
+num = xlsread('assembly_statistics.xlsx');
+% 	1length 	2av,qual	3#-reads	4mx,cov,	5av,cov	6GC%	7CnIUPAC	8CnFunny	9CnN	10CnX	11nGap	12CnNoCov
+
+%Length vs #reads
+x=num(:,1);
+y=num(:,3);
+figure(1);
+plot(x,y,'*');
+xlabel('Length');
+ylabel('#reads');
+title('Length vs #reads');
+
+%Length vs average quality
+x=num(:,2);
+y=num(:,1);
+figure(2);
+plot(x,y,'*');
+xlabel('Length');
+ylabel('Average quality');
+title('Length vs Average quality');
+
+%Length vs average quality
+x=num(:,3);
+y=num(:,3);
+figure(3);
+plot(x,y,'*');
+xlabel('Average quality');
+ylabel('#reads');
+title('#reads vs Average quality');
