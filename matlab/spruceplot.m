@@ -46,4 +46,11 @@ ylabel('Length');
 xlabel('GC%');
 title('Length vs GC%');
 
-
+%Length vs GC%
+x=num(:,1);
+y=num(:,6);
+figure(6);
+plot(x,y,'*');
+ylabel('Length');
+xlabel('GC%');
+title('Length vs GC%');
